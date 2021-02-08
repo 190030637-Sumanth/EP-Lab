@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login</title>
+<style>
+      form{
+        margin-top: 160px;
+        margin-left: 250px;
+        margin-right: 250px;
+        font-size: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    padding-left:100px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    background-color: rgb(249, 241, 241);
+    text-decoration-color: rgb(255, 255, 255);
+    border-style: groove;
+}
+   body{
+     background-image: url(images/back.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+   }
+   input[type=submit]{
+    background-color: rgb(243, 71, 71);
+     padding: 5px 40px;
+     font-size: 14px;
+     color: white;
+   }
+    </style>
+<script>
+ function validation()
+ {
+  var user=document.f1.user.value; 
+  var email=document.f1.email.value;
+  var at=email.indexOf('@');
+  var dot="-1"
+  var dot=email.lastIndexOf('.');
+  if(email==null||email=="")
+  {
+  alert("Email Id is empty");
+  }
+  else if(parseInt(at)<1||parseInt(dot)<parseInt(at)||parseInt(dot)-parseInt(at)==1||email.length-parseInt(dot)<3)
+  {
+  alert("Invalid email id");
+  }
+  if(password==null||password=="")
+  {
+   alert("password should not be left empty");
+  }
+ }
+</script>
+</head>
+<body>
+<form name="f1" action="loginCheck" method="post">
+Login<br><br>
+Email Id:<input type="text" name="email"><br><br>
+Password:<input type="password" name="password"><br><br>
+<input type="submit" value="login"><br>
+Dont have an account?<a href="signup.html">signup</a>
+</form>
+</body>
+</html>
